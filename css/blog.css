@@ -213,3 +213,27 @@
 
     color: #868686;
 }
+
+.article-card {
+    position: relative;
+}
+
+.article-card__overlay-link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    border-radius: inherit;
+}
+
+.article-card__tags {
+    z-index: 2;
+}
+
+.article-card__tag {
+    position: relative;
+}
+
+.article-card:hover .article-card__title {
+    text-decoration: underline;
+}
