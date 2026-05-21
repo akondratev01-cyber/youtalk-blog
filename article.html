@@ -5,52 +5,603 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTalk — Статья</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/article.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="stylesheet" href="css/article-adaptive.css">
 </head>
 <body>
     <header class="header">
         <div class="container header__container">
             <a class="header__logo" href="#">
-                <img class="header__logo-image" src="icons/logo.svg">
+                <img class="header__logo-image" src="icons/logo.svg" alt="YouTalk">
             </a>
 
             <nav class="header__nav" aria-label="Основная навигация">
-                <!-- Навигация будет позже -->
+                <ul class="header__menu">
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="#">О нас</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="#">Тарифы</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="#">Для бизнеса</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="#">Психологам</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="#">Сертификат</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-link header__menu-link--dropdown" href="#">Материалы</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="#">FAQ</a>
+                    </li>
+                </ul>
             </nav>
 
             <button class="header__button" type="button">
                 Подобрать психолога
             </button>
+            <button class="header__burger" type="button" aria-label="Открыть меню">
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+            </button>
         </div>
     </header>
 
-    <main class="main">
+    <main class="main article-main">
+        <div class="article-pink-blob article-pink-blob--large" aria-hidden="true"></div>
+        <div class="article-pink-blob article-pink-blob--promo" aria-hidden="true"></div>
+
         <div class="container article-page">
             <article class="article">
                 <nav class="breadcrumbs" aria-label="Хлебные крошки">
-                    <!-- Хлебные крошки будут позже -->
+                    <ol class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <span class="breadcrumbs__current">Блог</span>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <span class="breadcrumbs__current">Как не утонуть в тревоге и управлять своими страхами</span>
+                        </li>
+                    </ol>
                 </nav>
 
                 <h1 class="article__title">
-                    Эмоциональное выгорание — стадии и симптомы, методы восстановления и профилактики
+                    Как не утонуть в тревоге и управлять своими страхами
                 </h1>
 
-                <!-- Основной текст статьи будет позже -->
+                <div class="article__meta">
+                    <span>Автор: Лиза Файнтух</span>
+                    <span>21.08.2021</span>
+                    <a class="article__meta-source" href="#">Self</a>
+                </div>
+                
+                <img
+                    class="article__hero-image" 
+                    src="images/swimming-anxiety.png"
+                    alt="Как не утонуть в тревоге"
+                >
+
+                <section class="article-content">
+                    <h2 class="article-content__title">Содержание</h2>
+
+                    <ul class="article-content__list">
+                        <li class="article-content__item">
+                            <a class="article-content__link" href="#">
+                                Как понять, что отношения с мамой были дисфункциональными и привели к травме?
+                            </a>
+                        </li>
+                        <li class="article-content__item">
+                            <a class="article-content__link" href="#">
+                                Мама привет!
+                            </a>
+                        </li>
+                        <li class="article-content__item article-content__item--nested">
+                            <a class="article-content__link" href="#">
+                                Под под заголовок под заголовком
+                            </a>
+                        </li>
+                        <li class="article-content__item article-content__item--nested article-content__item--level-2">
+                            <a class="article-content__link" href="#">
+                                Под под под заголовок под заголовком
+                            </a>
+                        </li>
+                        <li class="article-content__item article-content__item--nested article-content__item--level-3">
+                            <a class="article-content__link" href="#">
+                                Под под под под заголовок под заголовком
+                            </a>
+                        </li>
+                        <li class="article-content__item">
+                            <a class="article-content__link" href="#">
+                                Ну вот опять заголовок который как «привет мама»
+                            </a>
+                        </li>
+                        <li class="article-content__item">
+                            <a class="article-content__link" href="#">
+                                Как понять, что вы страдаете от материнской травмы?
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="article-section">
+                    <h2 class="article-section__title">Заголовок h3</h2>
+
+                    <p class="article-section__text">
+                        Один из самых важных навыков, которые может дать работа с психотерапевтом — умение в разных ситуациях по-разному обходиться со своими эмоциями. Снять этот процесс с автопилота и перенести его в поле сознания.
+                    </p>
+
+                    <p class="article-section__text">
+                        Давайте, к примеру, разберём тревогу. Можно разложить перед собой целую коллекцию доступных реакций и выбрать нужную.
+                    </p>
+
+                    <blockquote class="article-quote">
+                        <p class="article-quote__text">
+                            Мы знаем, что нуждаться в помощи и поддержке в трудные периоды жизни абсолютно нормально для любого человека, и стремимся сделать психотерапию безопасной, удобной и доступной каждому
+                        </p>
+                        <cite class="article-quote__author">Анна Крымская</cite>
+                    </blockquote>
+                </section>
+
+                <section class="article-section">
+                    <h2 class="article-section__title">Что еще можно делать с тревогой?</h2>
+
+                    <ul class="article-list">
+                        <li class="article-list__item">
+                            Управлять ей через что-то внешнее: включать музыку, которая создает другое настроение,
+                            сесть за работу с цифрами, которая быстренько активизирует другие участки мозга,
+                            читать блоги, которые вас успокаивают и отвлекают.
+                        </li>
+                        <li class="article-list__item">
+                            А еще порой можно разрешить себе тревогу заесть чем-то вкусным. Это, конечно,
+                            не самая здоровая стратегия, но в ряде ситуаций можно считать ее вполне рабочей.
+                            Особенно, когда внутренний ресурс на нуле, а поддерживающее окружение не в доступе.
+                        </li>
+                    </ul>
+
+                    <figure class="article-figure">
+                        <img
+                            class="article-figure__image"
+                            src="images/people-emotions.png"
+                            alt="Люди идут по светлому помещению"
+                        >
+                        <figcaption class="article-figure__caption">
+                            Онтогенез речи отражает групповой эриксоновский гипноз.
+                        </figcaption>
+                    </figure>
+
+                    <p class="article-section__text article-section__text--after-figure">
+                        Чем шире доступный вам репертуар реакций и чем более осознанно вы можете выбирать из него то, что лучше всего подойдет в каждой конкретной ситуации, тем больше будет ваша устойчивость к стрессу, депрессии, неопределенности, да и к жизни в целом.
+                    </p>
+
+                    <blockquote class="article-center-quote">
+                        <p class="article-center-quote__text">
+                            Мы знаем, что нуждаться в помощи и поддержке в трудные периоды жизни абсолютно нормально для любого человека, и стремимся сделать психотерапию безопасной, удобной и доступной каждому
+                        </p>
+                    </blockquote>
+
+                    <p class="article-section__text">
+                        Одна из ключевых задач психотерапии как раз и заключается в том, чтобы этот репертуар расширять и обучать человека пользоваться доступными ему реакциями в той последовательности, пропорции и объеме, которые подходят именно ему. Без оглядки на то, “как правильно” или “как у других”.
+                    </p>
+
+                    <div class="article-image-text">
+                        <img
+                            class="article-image-text__img"
+                            src="./images/woman-anxiety.png"
+                            alt="Женщина сидит облакатившись на подлокотник кресла"
+                        >
+
+                        <div class="article-image-text__content">
+                            <p class="article-image-text__text">
+                                Чем шире доступный вам репертуар реакций и чем более осознанно вы можете выбирать из него то,
+                                что лучше всего подойдет в каждой конкретной ситуации, тем больше будет ваша устойчивость к стрессу,
+                                депрессии, неопределенности, да и к жизни в целом.
+                                <br>
+                                А еще порой можно разрешить себе тревогу заесть чем-то вкусным. 
+                            </p>
+                        </div>
+                   </div>
+
+                   <p class="article-section__text article-section__text--after-image-text">
+                        Чем шире доступный вам репертуар реакций и чем более осознанно вы можете выбирать из него то,
+                        что лучше всего подойдет в каждой конкретной ситуации, тем больше будет ваша устойчивость к стрессу,
+                        депрессии, неопределенности, да и к жизни в целом.
+                    </p>
+
+                    <div class="article-exercise article-exercise--beige">
+                        <h3 class="article-exercise__title">Упражнение #1</h3>
+
+                        <p class="article-exercise__text">
+                            Нужно последовательно напрягать и расслаблять каждую мышцу в теле на несколько секунд.
+                            Напрягать стоит довольно сильно, чтобы потом отчетливее ощущать расслабляющий эффект.
+                            Начать можно с пальцев ног и постепенно подниматься вверх. Смысл в том, чтобы через напряжение
+                            дать стрессу выход, а затем вновь привести себя в спокойное состояние через расслабление.
+                        </p>
+                    </div>
+
+                    <h2 class="article-section__title article-section__title--after-exercise">
+                        Что еще можно делать с тревогой?
+                    </h2>
+
+                    <ul class="article-list article-list--anxiety-actions">
+                        <li class="article-list__item">
+                            Управлять ей через что-то внешнее: включать музыку, которая создает другое настроение,
+                            сесть за работу с цифрами, которая быстренько активизирует другие участки мозга,
+                            читать блоги, которые вас успокаивают и отвлекают.
+                        </li>
+                        <li class="article-list__item">
+                            А еще порой можно разрешить себе тревогу заесть чем-то вкусным. Это, конечно,
+                            не самая здоровая стратегия, но в ряде ситуаций можно считать ее вполне рабочей.
+                            Особенно, когда внутренний ресурс на нуле, а поддерживающее окружение не в доступе.
+                        </li>
+                    </ul>
+
+                    <div class="article-image-text article-image-text--small">
+                        <img
+                            class="article-image-text__img article-image-text__img--small"
+                            src="./images/hands.png"
+                            alt="Руки человека"
+                        >
+
+                        <div class="article-image-text__content">
+                            <p class="article-image-text__text">
+                                Чем шире доступный вам репертуар реакций и чем более осознанно вы можете выбирать из него то,
+                                что лучше всего подойдет в каждой конкретной ситуации, тем больше будет ваша устойчивость к стрессу.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="article-section__text article-section__text--after-image-text">
+                        Чем шире доступный вам репертуар реакций и чем более осознанно вы можете выбирать из него то,
+                        что лучше всего подойдет в каждой конкретной ситуации, тем больше будет ваша устойчивость к стрессу,
+                        депрессии, неопределенности, да и к жизни в целом.
+                    </p>
+
+                    <div class="article-exercise article-exercise--orange">
+                        <h3 class="article-exercise__title">Упражнение #2</h3>
+
+                        <p class="article-exercise__text">
+                            Нужно последовательно напрягать и расслаблять каждую мышцу в теле на несколько секунд.
+                            Напрягать стоит довольно сильно, чтобы потом отчетливее ощущать расслабляющий эффект.
+                            Начать можно с пальцев ног и постепенно подниматься вверх. Смысл в том, чтобы через напряжение
+                            дать стрессу выход, а затем вновь привести себя в спокойное состояние через расслабление.
+                        </p>
+                    </div>
+
+                    <div class="article-two-columns">
+                        <div class="article-two-columns__item">
+                            <img
+                                class="article-two-columns__image"
+                                src="./images/chair.png"
+                                alt="Стул у стены"
+                            >
+
+                            <p class="article-two-columns__text">
+                                Чем шире доступный вам репертуар реакций и чем более осознанно вы можете выбирать из него то,
+                                что лучше всего подойдет в каждой конкретной ситуации, тем больше будет ваша устойчивость к стрессу,
+                                депрессии, неопределенности, да и к жизни в целом.
+                            </p>
+                        </div>
+
+                        <div class="article-two-columns__item">
+                            <img
+                                class="article-two-columns__image"
+                                src="./images/person-on-pier.png"
+                                alt="Человек на пирсе"
+                            >
+
+                            <p class="article-two-columns__text">
+                                Чем шире доступный вам репертуар реакций и чем более осознанно вы можете выбирать из него то,
+                                что лучше всего подойдет в каждой конкретной ситуации, тем больше будет ваша устойчивость к стрессу,
+                                депрессии, неопределенности, да и к жизни в целом.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="article-divider-icon" aria-hidden="true">
+                        <img
+                            class="article-divider-icon__image"
+                            src="./icons/Group.svg"
+                            alt=""
+                        >
+                    </div>
+
+                    <p class="article-section__text">
+                        Одна из ключевых задач психотерапии как раз и заключается в том, чтобы этот репертуар
+                        расширять и обучать человека пользоваться доступными ему реакциями в той последовательности,
+                        пропорции и объеме, которые подходят именно ему. Без оглядки на то, “как правильно” или
+                        “как у других”.
+                    </p>
+
+                    <div class="article-exercise article-exercise--green">
+                        <h3 class="article-exercise__title">Упражнение #1</h3>
+
+                        <p class="article-exercise__text">
+                            Нужно последовательно напрягать и расслаблять каждую мышцу в теле на несколько секунд.
+                            Напрягать стоит довольно сильно, чтобы потом отчетливее ощущать расслабляющий эффект.
+                            Начать можно с пальцев ног и постепенно подниматься вверх. Смысл в том, чтобы через напряжение
+                            дать стрессу выход, а затем вновь привести себя в спокойное состояние через расслабление.
+                        </p>
+                    </div>
+
+                    <nav class="article-tags" aria-label="Темы статьи">
+                        <a class="article-tags__link" href="#">Self</a>
+                        <span class="article-tags__separator">·</span>
+
+                        <a class="article-tags__link" href="#">Самооценка и самопринятие</a>
+                        <span class="article-tags__separator">·</span>
+
+                        <a class="article-tags__link" href="#">Самооценка и самопринятие</a>
+                        <span class="article-tags__separator">·</span>
+
+                        <a class="article-tags__link" href="#">Упражнения</a>
+
+                        <a class="article-tags__link" href="#">Чувства и эмоции</a>
+                        <span class="article-tags__separator">·</span>
+
+                        <a class="article-tags__link" href="#">Самооценка и самопринятие</a>
+                        <span class="article-tags__separator">·</span>
+
+                        <a class="article-tags__link" href="#">Тревога</a>
+                    </nav>
+                </section>
             </article>
 
             <aside class="sidebar">
-                <!-- Боковые карточки будут позже -->
+                <section class="sidebar-free-card">
+                    <img 
+                        class="sidebar-free-card__image"
+                        src="./icons/sidebar-free-slots.svg" 
+                        alt=""
+                    >
+
+                    <h2 class="sidebar-free-card__title">
+                        Загружаем свободные окошки
+                    </h2>
+
+                    <p class="sidebar-free-card__text">
+                        Все в порядке, сейчас мы перенаправим вас в сервис записи Qlick, через который удобно выбрать дату, время встречи и оплатить её
+                    </p>
+
+                    <a class="sidebar-free-card__button" href="#">
+                        Подробнее
+                    </a>
+                </section>
+                <section class="sidebar-psychologist-card">
+                    <div class="sidebar-psychologist-card__badges">
+                        <span class="sidebar-psychologist-card__badge">📝 Переписка</span>
+                        <span class="sidebar-psychologist-card__badge">🎥 Видео</span>
+                    </div>
+
+                    <img
+                        class="sidebar-psychologist-card__avatar"
+                        src="./images/psychologist-lilia.png"
+                        alt="Психолог Лилия"
+                    >
+
+                    <h2 class="sidebar-psychologist-card__name">Лилия</h2>
+
+                    <p class="sidebar-psychologist-card__role">Психолог</p>
+
+                    <p class="sidebar-psychologist-card__meta">
+                        Опыт 6 лет · 43 года
+                    </p>
+
+                    <div class="sidebar-psychologist-card__divider"></div>
+
+                    <h3 class="sidebar-psychologist-card__subtitle">
+                        С чем работает психолог
+                    </h3>
+
+                    <ul class="sidebar-psychologist-card__list">
+                        <li class="sidebar-psychologist-card__item">Тревога, тревожности</li>
+                        <li class="sidebar-psychologist-card__item">Подавленность</li>
+                        <li class="sidebar-psychologist-card__item">Тревога и панические атаки</li>
+                    </ul>
+
+                    <a class="sidebar-psychologist-card__button" href="#">
+                        Подробнее
+                    </a>
+                </section>
+                <section class="sidebar-care-card">
+                    <img
+                        class="sidebar-care-card__confetti"
+                        src="./icons/congratulation.svg"
+                        alt=""
+                    >
+
+                    <h2 class="sidebar-care-card__title">
+                        Дарите заботу
+                    </h2>
+
+                    <img
+                        class="sidebar-care-card__gifts sidebar-care-card__gifts--center"
+                        src="./icons/gift-center.svg"
+                        alt=""
+                    >
+                    
+                    <img
+                        class="sidebar-care-card__gifts sidebar-care-card__gifts--left"
+                        src="./icons/gift-left.svg"
+                        alt=""
+                    >
+                    
+                    <img
+                        class="sidebar-care-card__gifts sidebar-care-card__gifts--right"
+                        src="./icons/gift-right.svg"
+                        alt=""
+                    >
+                </section>
+
+                <section class="sidebar-video-card">
+                    <div class="sidebar-video-card__content">
+                        <h2 class="sidebar-video-card__title">
+                            8 Видео сессий
+                        </h2>
+
+                        <p class="sidebar-video-card__text">
+                            Проработать небольшие проблемы и продвинуться в решении сложных запросов
+                        </p>
+
+                        <p class="sidebar-video-card__price">
+                            18 500 ₽
+                        </p>
+
+                        <a class="sidebar-video-card__button" href="#">
+                            Купить
+                        </a>
+                    </div>
+
+                    <div class="sidebar-video-card__decor" aria-hidden="true">
+                        <img
+                            class="sidebar-video-card__gift sidebar-video-card__gift--left"
+                            src="./icons/sidebar-video-gift-left.svg"
+                            alt=""
+                        >
+
+                        <img
+                            class="sidebar-video-card__gift sidebar-video-card__gift--right"
+                            src="./icons/sidebar-video-gift-right.svg"
+                            alt=""
+                        >
+                    </div>
+                </section>
+
             </aside>
+
+            <hr class="article-bottom-divider">
+
+            <section class="article-promo">
+                <div class="article-promo__content">
+                    <h2 class="article-promo__title">
+                        Откликается проблема?
+                    </h2>
+
+                    <p class="article-promo__text">
+                        Поможем подобрать специалиста по работе с подобным запросом
+                    </p>
+
+                    <button class="article-promo__button" type="button">
+                        Подобрать психолога
+                    </button>
+                </div>
+
+                <img
+                    class="article-promo__image"
+                    src="./icons/article-promo.svg"
+                    alt=""
+                >
+            </section>
+
         </div>
     </main>
 
+    <div class="footer-wave" aria-hidden="true"></div>
+
     <footer class="footer">
         <div class="container footer__container">
-            <!-- Footer будет позже -->
+            <div class="footer__top">
+                <nav class="footer__nav" aria-label="Навигация в подвале">
+                    <ul class="footer__menu">
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link" href="#">О нас</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link" href="#">Тарифы</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link" href="#">Для бизнеса</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link" href="#">Психологам</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link" href="#">FAQ</a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer__menu">
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link" href="#">Блог</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link" href="#">Вебинары</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link" href="#">Подкаст</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link" href="#">Сертификат</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link" href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="footer__subscribe">
+                    <h2 class="footer__subscribe-title">
+                        Одно письмо в неделю со свежими новостями и акциями
+                    </h2>
+
+                    <form class="footer__form" action="#" method="post">
+                        <label class="visually-hidden" for="footer-email">
+                            Email
+                        </label>
+                        <input class="footer__input" id="footer-email" type="email" name="email" placeholder="Ваш e-mail">
+                        <button class="footer__submit" type="submit" aria-label="Подписаться"></button>
+                    </form>
+
+                    <p class="footer__agreement">
+                        Подписываясь, я соглашаюсь на обработку персональных данных в соответствии с ФЗ РФ № 152-ФЗ «О персональных данных», а также с Политикой конфиденциальности
+                    </p>
+                </div>
+
+                <div class="footer__social">
+                    <a class="footer__participant" href="#" aria-label="Участник Сколково">
+                        <img class="footer__participant-logo" src="icons/sk-participant.svg" alt="">
+                    </a>
+
+                    <ul class="footer__social-list">
+                        <li class="footer__social-item">
+                            <a class="footer__social-link" href="#" aria-label="ВКонтакте">
+                                <img class="footer__social-icon" src="icons/vk.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a class="footer__social-link" href="#" aria-label="Telegram">
+                                <img class="footer__social-icon" src="icons/telegram.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a class="footer__social-link" href="#" aria-label="Twitter">
+                                <img class="footer__social-icon" src="icons/twitter.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a class="footer__social-link" href="#" aria-label="Дзен">
+                                <img class="footer__social-icon" src="icons/dzen.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">©Youtalk, 2018–2022</p>
+                <a class="footer__bottom-link" href="#">Юридические документы</a>
+                <a class="footer__bottom-link" href="#">Способы оплаты</a>
+            </div>
         </div>
     </footer>
 </body>
